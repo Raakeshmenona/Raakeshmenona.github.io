@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Raakesh Menon — Senior Data Engineer</title>
+<meta name="description" content="Raakesh Menon — Senior Data Engineer specialising in Snowflake, Apache Spark/PySpark, Azure Data Platform and Python-driven ETL/ELT modernisation for Fortune 500 clients." />
+<meta name="author" content="Raakesh Menon A" />
+<meta name="theme-color" content="#0a1018" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Raakesh Menon — Senior Data Engineer" />
+<meta property="og:description" content="Snowflake · PySpark · Azure Data Platform · Python ETL/ELT modernisation. 4+ years building enterprise data platforms for Fortune 500 clients." />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%E2%9D%84%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<script>
+  /* Resolve the theme before first paint so there is no flash of the wrong palette. */
+  (function () {
+    var t;
+    try { t = localStorage.getItem('rm-theme'); } catch (e) {}
+    if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', t === 'dark' ? '#070d14' : '#ffffff');
+  })();
+</script>
+</head>
+<body>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ============ AMBIENT BACKGROUND ============ -->
+<div class="ambient" aria-hidden="true">
+  <span class="blob blob--1"></span>
+  <span class="blob blob--2"></span>
+  <span class="blob blob--3"></span>
+  <div class="grid-veil"></div>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a class="brand" href="#hero" aria-label="Raakesh Menon — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+          <path d="M12 2v20M12 2 8.8 5.2M12 2l3.2 3.2M12 22l-3.2-3.2M12 22l3.2-3.2"/>
+          <path d="M3.34 7 20.66 17M3.34 7l.86 4.4M3.34 7l4.4-.86M20.66 17l-4.4.86M20.66 17l-.86-4.4"/>
+          <path d="M3.34 17 20.66 7M3.34 17l4.4.86M3.34 17l.86-4.4M20.66 7l-.86 4.4M20.66 7l-4.4-.86"/>
+        </svg>
+      </span>
+      <span class="brand__text">Raakesh<span class="brand__dot">.</span>Menon</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle colour theme" title="Toggle light / dark">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8Z"/>
+        </svg>
+      </button>
+
+      <a class="btn btn--sm btn--primary nav__cta" href="assets/files/Raakesh_Menon_Senior_Data_Engineer_Resume.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4.2-4.2M12 15l-4.2-4.2M4 17.5v1.8A1.7 1.7 0 0 0 5.7 21h12.6a1.7 1.7 0 0 0 1.7-1.7v-1.8"/></svg>
+        Résumé
+      </a>
+
+      <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="container hero__grid">
+
+    <div class="hero__copy">
+      <p class="hero__eyebrow reveal">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Bengaluru, India · Open to Senior Data Engineering roles
+      </p>
+
+      <h1 class="hero__title reveal" data-reveal-delay="60">Raakesh Menon</h1>
+
+      <p class="hero__role reveal" data-reveal-delay="120">
+        <span class="hero__role-static">Senior Data Engineer —</span>
+        <span class="rotator" id="rotator" aria-live="polite"><span class="rotator__text"></span><span class="rotator__caret" aria-hidden="true"></span></span>
+      </p>
+
+      <p class="hero__lede reveal" data-reveal-delay="180">
+        4+ years building enterprise data platforms for <strong>Fortune 500</strong> clients across banking,
+        semiconductor, aerospace and animal-health. I re-architect legacy pipelines into scalable
+        cloud-native frameworks on <strong>Snowflake</strong>, <strong>PySpark</strong> and the
+        <strong>Azure data stack</strong> — with data-quality, validation and anomaly-detection controls
+        wired in from day one.
+      </p>
+
+      <div class="hero__cta reveal" data-reveal-delay="240">
+        <a class="btn btn--primary" href="#projects">
+          Explore my work
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0-5.5-5.5M19 12l-5.5 5.5"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#contact">Get in touch</a>
+      </div>
+
+      <div class="hero__social reveal" data-reveal-delay="300">
+        <a href="https://github.com/Raakeshmenona" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2.2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/araakeshmenon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9.5 9h3.8v1.64h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4Z"/></svg>
+        </a>
+        <a href="mailto:raakesh.ajaykumar@outlook.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 8.3 5.6a1.2 1.2 0 0 0 1.4 0L21 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Animated pipeline visual -->
+    <div class="hero__visual reveal" data-reveal-delay="220" aria-hidden="true">
+      <div class="pipeline-card">
+        <div class="pipeline-card__bar">
+          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+          <span class="pipeline-card__title">medallion_pipeline.py</span>
+          <span class="pipeline-card__badge">running</span>
+        </div>
+
+        <svg class="pipeline" viewBox="0 0 420 300" role="img">
+          <defs>
+            <linearGradient id="flowGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#29b5e8"/>
+              <stop offset="55%" stop-color="#7d44cf"/>
+              <stop offset="100%" stop-color="#d45b90"/>
+            </linearGradient>
+            <filter id="soft"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+
+          <g class="pipe-edges" stroke="url(#flowGrad)" stroke-width="1.5" fill="none">
+            <path id="p1" d="M78 60 C150 60 150 150 206 150"/>
+            <path id="p2" d="M78 150 C140 150 150 150 206 150"/>
+            <path id="p3" d="M78 240 C150 240 150 150 206 150"/>
+            <path id="p4" d="M268 150 C310 150 312 78 348 78"/>
+            <path id="p5" d="M268 150 C312 150 314 150 348 150"/>
+            <path id="p6" d="M268 150 C310 150 312 222 348 222"/>
+          </g>
+
+          <g filter="url(#soft)">
+            <circle class="packet" r="3.8" fill="#76d0f1"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+            <circle class="packet" r="3.8" fill="#29b5e8"><animateMotion dur="2.6s" begin="0.5s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
+            <circle class="packet" r="3.8" fill="#76d0f1"><animateMotion dur="2.6s" begin="1s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle>
+            <circle class="packet" r="3.8" fill="#7d44cf"><animateMotion dur="2.4s" begin="1.4s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></circle>
+            <circle class="packet" r="3.8" fill="#d45b90"><animateMotion dur="2.4s" begin="1.8s" repeatCount="indefinite"><mpath href="#p5"/></animateMotion></circle>
+            <circle class="packet" r="3.8" fill="#7d44cf"><animateMotion dur="2.4s" begin="2.2s" repeatCount="indefinite"><mpath href="#p6"/></animateMotion></circle>
+          </g>
+
+          <g class="pipe-node"><rect x="10" y="42" width="68" height="36" rx="9"/><text x="44" y="65">SAP</text></g>
+          <g class="pipe-node"><rect x="10" y="132" width="68" height="36" rx="9"/><text x="44" y="155">Kafka</text></g>
+          <g class="pipe-node"><rect x="10" y="222" width="68" height="36" rx="9"/><text x="44" y="245">Oracle</text></g>
+
+          <g class="pipe-core">
+            <rect x="204" y="110" width="66" height="80" rx="15"/>
+            <text x="237" y="145">Spark</text>
+            <text x="237" y="165" class="sub">ETL</text>
+          </g>
+
+          <g class="pipe-node pipe-node--out"><rect x="348" y="60" width="64" height="36" rx="9"/><text x="380" y="83">Bronze</text></g>
+          <g class="pipe-node pipe-node--out"><rect x="348" y="132" width="64" height="36" rx="9"/><text x="380" y="155">Silver</text></g>
+          <g class="pipe-node pipe-node--out"><rect x="348" y="204" width="64" height="36" rx="9"/><text x="380" y="227">Gold</text></g>
+        </svg>
+
+        <div class="pipeline-card__foot">
+          <span><b>2 TB</b> / month</span>
+          <span><b>99.63%</b> equivalence</span>
+          <span><b>0</b> defects past gate</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Metrics band -->
+  <div class="container">
+    <div class="metrics reveal">
+      <div class="metric"><span class="metric__num" data-count="4" data-suffix="+">0</span><span class="metric__label">Years engineering data platforms</span></div>
+      <div class="metric"><span class="metric__num" data-count="2" data-suffix=" TB">0</span><span class="metric__label">Processed per month with PySpark</span></div>
+      <div class="metric"><span class="metric__num" data-count="25" data-suffix="+">0</span><span class="metric__label">Legacy workloads migrated to Snowflake</span></div>
+      <div class="metric"><span class="metric__num" data-count="75" data-suffix="%">0</span><span class="metric__label">Faster enterprise reporting cycle</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Snowflake</span><i>*</i><span>Apache Spark</span><i>*</i><span>PySpark</span><i>*</i><span>Azure Databricks</span><i>*</i><span>Delta Lake</span><i>*</i><span>Azure Data Factory</span><i>*</i><span>ADLS Gen2</span><i>*</i><span>Airflow</span><i>*</i><span>Kafka</span><i>*</i><span>dbt</span><i>*</i><span>Python</span><i>*</i><span>Advanced SQL</span><i>*</i><span>Power BI</span><i>*</i><span>Azure DevOps</span><i>*</i><span>MLflow</span><i>*</i><span>Snowflake</span><i>*</i><span>Apache Spark</span><i>*</i><span>PySpark</span><i>*</i><span>Azure Databricks</span><i>*</i><span>Delta Lake</span><i>*</i><span>Azure Data Factory</span><i>*</i><span>ADLS Gen2</span><i>*</i><span>Airflow</span><i>*</i><span>Kafka</span><i>*</i><span>dbt</span><i>*</i><span>Python</span><i>*</i><span>Advanced SQL</span><i>*</i><span>Power BI</span><i>*</i><span>Azure DevOps</span><i>*</i><span>MLflow</span><i>*</i>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="kicker">01 — About</span>
+      <h2 class="section__title">Legacy pipelines in. <span class="grad">Governed lakehouses out.</span></h2>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__prose reveal">
+        <p>
+          I'm a Senior Data Engineer at <strong>Tata Consultancy Services</strong> in Bengaluru, where I've spent
+          4+ years on the unglamorous but decisive half of analytics: making the data arrive on time, in the right
+          shape, and provably correct.
+        </p>
+        <p>
+          My work sits at the intersection of <strong>Snowflake warehousing</strong>,
+          <strong>distributed processing with Spark/PySpark</strong>, and <strong>Python-driven ETL/ELT
+          modernisation</strong>. In practice that has meant translating 30+ Perl workflows into maintainable
+          Python, moving 25+ Oracle workloads to Snowflake with a zero-downtime cutover, and building validation
+          and anomaly-detection frameworks so that a failure is caught by a gate rather than by a stakeholder.
+        </p>
+        <p>
+          I own delivery end to end — requirements, Agile execution through Azure DevOps Boards/Repos/Pipelines,
+          release management, and production support. Lately I've been pushing into
+          <strong>LLM-assisted data engineering</strong>: using models to accelerate migration work while
+          proving behavioural equivalence with hard, automated evidence.
+        </p>
+      </div>
+
+      <aside class="about__facts reveal" data-reveal-delay="120">
+        <h3 class="about__facts-title">At a glance</h3>
+        <ul class="facts">
+          <li><span>Role</span><b>Senior Systems Engineer (Data Engineer)</b></li>
+          <li><span>Company</span><b>Tata Consultancy Services</b></li>
+          <li><span>Based in</span><b>Bengaluru, India</b></li>
+          <li><span>Domains</span><b>Banking · Semiconductor · Aerospace · Animal Health</b></li>
+          <li><span>Core stack</span><b>Snowflake · PySpark · Azure · Python · Airflow</b></li>
+          <li><span>Education</span><b>B.E. Mechanical, Anna University</b></li>
+        </ul>
+        <div class="about__badges">
+          <span class="chip chip--ok">Available for new roles</span>
+          <span class="chip">Hybrid / Remote</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section section--alt" id="skills">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="kicker">02 — Capabilities</span>
+      <h2 class="section__title">The stack I build with</h2>
+      <p class="section__sub">Filter by discipline — everything below is something I've shipped with in production or in a full end-to-end build.</p>
+    </div>
+
+    <div class="filter-bar reveal">
+      <button class="filter is-active" data-filter="all" type="button">All</button>
+      <button class="filter" data-filter="lang" type="button">Languages</button>
+      <button class="filter" data-filter="de" type="button">Data Engineering</button>
+      <button class="filter" data-filter="azure" type="button">Azure Platform</button>
+      <button class="filter" data-filter="arch" type="button">Architecture</button>
+      <button class="filter" data-filter="ml" type="button">ML &amp; AI</button>
+      <button class="filter" data-filter="bi" type="button">BI &amp; Analytics</button>
+      <button class="filter" data-filter="ops" type="button">DevOps</button>
+    </div>
+
+    <div class="skill-grid" id="skillGrid">
+
+      <article class="skill-card reveal" data-cat="lang">
+        <div class="skill-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-5 6 5 6M16 6l5 6-5 6M13.5 4l-3 16"/></svg>
+        </div>
+        <h3>Programming</h3>
+        <div class="tags">
+          <span class="tag--hero">Python</span><span>Pandas</span><span>NumPy</span><span class="tag--hero">Advanced SQL</span><span>PL/SQL</span><span>Shell Scripting</span><span>REST API Integration</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal" data-cat="de" data-reveal-delay="60">
+        <div class="skill-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.66 3.58 3 8 3s8-1.34 8-3v-13M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg>
+        </div>
+        <h3>Data Engineering</h3>
+        <div class="tags">
+          <span class="tag--hero">Snowflake</span><span class="tag--hero">Apache Spark</span><span class="tag--hero">PySpark</span><span>ETL/ELT Modernisation</span><span>Apache Airflow</span><span>Apache Kafka</span><span>Talend</span><span>Incremental Loads &amp; CDC</span><span>Data Migration</span><span>Star-Schema Modelling</span><span>Pipeline Architecture</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal" data-cat="azure" data-reveal-delay="120">
+        <div class="skill-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 19h10.2a4.3 4.3 0 0 0 .7-8.54 6 6 0 0 0-11.6-1.2A4.5 4.5 0 0 0 6.5 19Z"/></svg>
+        </div>
+        <h3>Azure Data Platform</h3>
+        <div class="tags">
+          <span class="tag--hero">Azure Databricks</span><span class="tag--hero">ADLS Gen2</span><span class="tag--hero">Data Factory</span><span>Delta Lake</span><span>Synapse Analytics</span><span>Azure SQL Database</span><span>Azure Functions</span><span>Key Vault</span><span>Azure Monitor</span><span>Microsoft Fabric</span><span>Microsoft Purview</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal" data-cat="arch" data-reveal-delay="60">
+        <div class="skill-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 21 7v10l-9 4.5L3 17V7Z"/><path d="M3 7l9 4.5L21 7M12 11.5V21.5"/></svg>
+        </div>
+        <h3>Architecture &amp; Governance</h3>
+        <div class="tags">
+          <span class="tag--hero">Medallion Architecture</span><span>Data Lake / Lakehouse</span><span>Data Quality Engineering</span><span>Validation Frameworks</span><span>Anomaly Detection</span><span>Data Profiling</span><span>Data Lineage</span><span>Data Governance</span><span>Performance Optimisation</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal" data-cat="ml" data-reveal-delay="120">
+        <div class="skill-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.4"/><circle cx="4.5" cy="6" r="2"/><circle cx="4.5" cy="18" r="2"/><circle cx="19.5" cy="6" r="2"/><circle cx="19.5" cy="18" r="2"/><path d="m6.2 7 3.7 3.5M6.2 17l3.7-3.4M17.8 7l-3.7 3.5M17.8 17l-3.7-3.4"/></svg>
+        </div>
+        <h3>Machine Learning &amp; AI</h3>
+        <div class="tags">
+          <span class="tag--hero">Generative AI &amp; LLM Integration</span><span>RAG</span><span>Prompt Engineering</span><span>Time-Series Forecasting</span><span>XGBoost</span><span>Random Forest</span><span>Regression</span><span>Feature Engineering</span><span>MLflow</span><span>MLOps</span><span>Model Evaluation</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal" data-cat="bi" data-reveal-delay="60">
+        <div class="skill-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5h17M7 20.5V11M12 20.5V4.5M17 20.5v-6"/></svg>
+        </div>
+        <h3>BI &amp; Analytics</h3>
+        <div class="tags">
+          <span class="tag--hero">Power BI</span><span>DAX</span><span>Power Query</span><span>Tableau</span><span>Looker Studio</span><span>KPI Dashboard Development</span>
+        </div>
+      </article>
+
+      <article class="skill-card reveal" data-cat="ops" data-reveal-delay="120">
+        <div class="skill-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><circle cx="18" cy="12" r="2.6"/><path d="M6 8.6v6.8M8.6 6h4.9a2 2 0 0 1 2 2v1.6M8.6 18h4.9a2 2 0 0 0 2-2v-1.6"/></svg>
+        </div>
+        <h3>DevOps &amp; Delivery</h3>
+        <div class="tags">
+          <span class="tag--hero">Azure DevOps</span><span>CI/CD Pipelines</span><span>Git</span><span>Agile / Scrum</span><span>Jira</span><span>SDLC</span><span>Stakeholder Management</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="kicker">03 — Experience</span>
+      <h2 class="section__title">Where I've shipped</h2>
+      <p class="section__sub">Four-plus years at TCS delivering for Fortune 500 clients across four industries.</p>
+    </div>
+
+    <div class="timeline">
+      <span class="timeline__rail" aria-hidden="true"><i id="railFill"></i></span>
+
+      <article class="tl-item reveal">
+        <span class="tl-item__dot" aria-hidden="true"></span>
+        <div class="tl-item__card">
+          <div class="tl-item__top">
+            <div>
+              <h3 class="tl-item__role">Senior Systems Engineer <span class="tl-item__alias">(Senior Data Engineer)</span></h3>
+              <p class="tl-item__org">Tata Consultancy Services — Bengaluru, India</p>
+            </div>
+            <span class="tl-item__when tl-item__when--now">Apr 2023 — Present</span>
+          </div>
+
+          <ul class="bullets">
+            <li>Designed and optimised <b>Apache Spark / PySpark</b> pipelines processing <b>~2 TB per month</b> of structured and semi-structured data for a global banking client, cutting distributed-processing bottlenecks by <b>~35%</b> via partition pruning and broadcast-join tuning.</li>
+            <li>Architected <b>Snowflake</b> data integration and <b>Power BI</b> analytics for a leading semiconductor manufacturer — unifying BOM hierarchies, SAP and Teamcenter engineering data from <b>8 source systems</b> and cutting dashboard refresh turnaround by <b>~30%</b>.</li>
+            <li>Built Python automation frameworks for validation, reconciliation, anomaly detection and statistical trend analysis across <b>40+ datasets</b>, cutting manual QA effort by <b>~50%</b>.</li>
+            <li>Automated enterprise reporting workflows in Power BI, reducing reporting cycle time by <b>~75%</b> — from ~2 days to ~4 hours.</li>
+            <li>Led migration of <b>25+ legacy Oracle / on-prem workloads</b> to Snowflake with redesigned warehouse and data models and a <b>zero-downtime cutover</b>.</li>
+            <li>Directed Agile delivery through <b>Azure DevOps</b> (Boards, Repos, Pipelines), owning CI/CD execution and release management with consistently on-time sprint releases and minimal production defects.</li>
+          </ul>
+
+          <div class="tl-item__stack">
+            <span>Snowflake</span><span>PySpark</span><span>Power BI</span><span>Python</span><span>Azure DevOps</span><span>Oracle</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="tl-item reveal" data-reveal-delay="100">
+        <span class="tl-item__dot" aria-hidden="true"></span>
+        <div class="tl-item__card">
+          <div class="tl-item__top">
+            <div>
+              <h3 class="tl-item__role">Systems Engineer <span class="tl-item__alias">(Data Engineer)</span></h3>
+              <p class="tl-item__org">Tata Consultancy Services — Bengaluru, India</p>
+            </div>
+            <span class="tl-item__when">Dec 2021 — Mar 2023</span>
+          </div>
+
+          <ul class="bullets">
+            <li>Re-architected <b>30+ legacy Perl ETL workflows</b> into Python-driven pipelines with Talend orchestration for enterprise banking platforms, cutting dependency-management overhead by <b>~40%</b> and orchestration overhead by <b>~25%</b>.</li>
+            <li>Developed scalable Python and SQL ETL workflows for high-volume <b>aerospace manufacturing</b> datasets, improving analytics processing performance by <b>~30%</b>.</li>
+            <li>Built <b>Snowflake</b> and Python ETL pipelines with workflow orchestration for enterprise <b>animal-health</b> datasets, improving integration reliability across <b>6 source systems</b>.</li>
+            <li>Delivered <b>15+ reusable ETL components</b> and automated validation/transformation frameworks adopted across <b>5+ project teams</b>, cutting manual processing effort by <b>~40%</b>.</li>
+          </ul>
+
+          <div class="tl-item__stack">
+            <span>Python</span><span>Talend</span><span>Snowflake</span><span>SQL</span><span>Perl to Python</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="tl-item reveal" data-reveal-delay="200">
+        <span class="tl-item__dot tl-item__dot--edu" aria-hidden="true"></span>
+        <div class="tl-item__card tl-item__card--muted">
+          <div class="tl-item__top">
+            <div>
+              <h3 class="tl-item__role">Bachelor of Engineering, Mechanical Engineering</h3>
+              <p class="tl-item__org">Anna University — Chennai, India</p>
+            </div>
+            <span class="tl-item__when">2016 — 2020</span>
+          </div>
+          <p class="tl-item__note">Engineering fundamentals in systems thinking and quantitative problem-solving — the route into data by way of curiosity rather than convention.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section section--alt" id="projects">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="kicker">04 — Key projects</span>
+      <h2 class="section__title">Five end-to-end <span class="grad">data platforms</span></h2>
+      <p class="section__sub">
+        Portfolio builds engineered to production standards — results measured on synthetic datasets.
+        Full code, pipelines and CI gates are on GitHub.
+      </p>
+    </div>
+
+    <div class="projects">
+
+      <article class="project reveal">
+        <div class="project__head">
+          <span class="project__idx">01</span>
+          <div class="project__heading">
+            <h3 class="project__title">LLM-Augmented Legacy ETL Modernization Framework</h3>
+            <p class="project__tag">LLM-assisted migration · behavioural-equivalence proof · CI supply-chain security</p>
+          </div>
+          <a class="project__link" href="https://github.com/Raakeshmenona/etl-modernization-framework" target="_blank" rel="noopener noreferrer" aria-label="View etl-modernization-framework on GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M9.5 8H16v6.5"/></svg>
+          </a>
+        </div>
+
+        <ul class="bullets">
+          <li>Translates legacy <b>Perl/SQL ETL to Python</b> with an LLM, then <b>proves behavioural equivalence</b> by dual-executing legacy and translated jobs on identical data and diffing outputs cell-by-cell — a 5-component weighted score (schema, row set, cell values, null patterns, ordering) with a <b>CI gate blocking promotion below 99%</b>.</li>
+          <li>Achieved <b>85.7% auto-translation</b> at <b>99.63% mean equivalence</b> and <b>0 defects past the gate</b> on a 7-unit corpus; auto-generated <b>129 regression tests</b> pinned to legacy behaviour.</li>
+          <li>Sandboxed LLM-generated code via <b>AST-based import allow-listing</b> as a CI supply-chain security control.</li>
+        </ul>
+
+        <div class="project__metrics">
+          <div><b>85.7%</b><span>auto-translated</span></div>
+          <div><b>99.63%</b><span>mean equivalence</span></div>
+          <div><b>129</b><span>regression tests</span></div>
+          <div><b>0</b><span>defects past gate</span></div>
+        </div>
+
+        <div class="project__stack">
+          <span>Python</span><span>Claude API</span><span>sqlglot</span><span>PySpark</span><span>Great Expectations</span><span>pytest</span><span>Airflow</span><span>Snowflake</span><span>Azure DevOps</span>
+        </div>
+      </article>
+
+      <article class="project reveal" data-reveal-delay="80">
+        <div class="project__head">
+          <span class="project__idx">02</span>
+          <div class="project__heading">
+            <h3 class="project__title">Aerospace MRO Supply-Chain Digital Twin</h3>
+            <p class="project__tag">Star-schema hub · SCD Type 2 · intermittent-demand forecasting</p>
+          </div>
+          <a class="project__link" href="https://github.com/Raakeshmenona/aerospace-mro-digital-twin" target="_blank" rel="noopener noreferrer" aria-label="View aerospace-mro-digital-twin on GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M9.5 8H16v6.5"/></svg>
+          </a>
+        </div>
+
+        <ul class="bullets">
+          <li>Unified <b>5 heterogeneous sources</b> (SAP extracts, OAuth2/EDI supplier portals, customs XML, WMS) into a <b>Snowflake star-schema hub</b> with SCD Type 2 dimensions, deterministic SHA-256 surrogate keys, idempotent MERGE loads and fail-soft ingestion.</li>
+          <li>PySpark part-identity resolution across supersession chains using <b>skew-aware salted joins</b>.</li>
+          <li>Engineered intermittent-demand forecasting (<b>Poisson-objective XGBoost</b>, Syntetos–Boylan classification, time-based splits) evaluated at <b>MASE 0.86</b> against a seasonal-naive baseline — an Airflow gate refuses to publish any model at MASE ≥ 1.0.</li>
+          <li>Flagged <b>24 parts pre-stockout</b> with a median <b>30-day</b> warning.</li>
+        </ul>
+
+        <div class="project__metrics">
+          <div><b>0.86</b><span>MASE vs baseline</span></div>
+          <div><b>5</b><span>sources unified</span></div>
+          <div><b>24</b><span>parts flagged early</span></div>
+          <div><b>30d</b><span>median warning</span></div>
+        </div>
+
+        <div class="project__stack">
+          <span>Python</span><span>PySpark</span><span>XGBoost</span><span>scikit-learn</span><span>Snowflake</span><span>Airflow</span><span>Power BI</span>
+        </div>
+      </article>
+
+      <article class="project reveal" data-reveal-delay="160">
+        <div class="project__head">
+          <span class="project__idx">03</span>
+          <div class="project__heading">
+            <h3 class="project__title">Semiconductor Yield Intelligence Pipeline</h3>
+            <p class="project__tag">BOM-aware root-cause analysis · graph explosion · CI ground-truth gate</p>
+          </div>
+          <a class="project__link" href="https://github.com/Raakeshmenona/semiconductor-yield-intelligence" target="_blank" rel="noopener noreferrer" aria-label="View semiconductor-yield-intelligence on GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M9.5 8H16v6.5"/></svg>
+          </a>
+        </div>
+
+        <ul class="bullets">
+          <li>Built <b>BOM-version-aware root-cause analysis</b> for wafer-yield excursions: an <b>8,000-node BOM explosion in 0.13 s</b>, implemented twice — a Python graph engine and a Snowflake recursive CTE for BI/dbt.</li>
+          <li>Per-lot as-built feature matrices with a <b>random-forest ranker</b> using permutation importance, empirical-Bayes shrinkage and robust MAD excursion thresholds.</li>
+          <li>Recovered <b>3 of 3 injected root causes</b> ranked #1/#2/#3 in <b>34 seconds</b> — against ~2–3 days of manual analysis — at holdout <b>R² 0.885</b>, enforced by a CI ground-truth gate that fails the build if the pipeline stops recovering known causes.</li>
+        </ul>
+
+        <div class="project__metrics">
+          <div><b>0.13s</b><span>8k-node explosion</span></div>
+          <div><b>3/3</b><span>root causes found</span></div>
+          <div><b>34s</b><span>vs 2–3 days manual</span></div>
+          <div><b>0.885</b><span>holdout R²</span></div>
+        </div>
+
+        <div class="project__stack">
+          <span>Python</span><span>networkx</span><span>scikit-learn</span><span>Snowflake recursive CTEs</span><span>dbt</span><span>Airflow</span><span>Power BI</span>
+        </div>
+      </article>
+
+      <article class="project reveal" data-reveal-delay="80">
+        <div class="project__head">
+          <span class="project__idx">04</span>
+          <div class="project__heading">
+            <h3 class="project__title">FHIR-Native Clinical Data Lakehouse</h3>
+            <p class="project__tag">Privacy-preserving record linkage · Bloom-filter PPRL · golden records</p>
+          </div>
+          <a class="project__link" href="https://github.com/Raakeshmenona/fhir-clinical-lakehouse" target="_blank" rel="noopener noreferrer" aria-label="View fhir-clinical-lakehouse on GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M9.5 8H16v6.5"/></svg>
+          </a>
+        </div>
+
+        <ul class="bullets">
+          <li>Implemented <b>Bloom-filter PPRL</b> (2048-bit composite CLKs, HMAC-SHA256 with field-salted keys, Kirsch–Mitzenmacher double hashing) so patient matching across two hospital systems <b>never transmits raw PII</b>.</li>
+          <li><b>Fellegi–Sunter</b> match/review/non-match thresholds with union-find golden-record clustering and deterministic enterprise patient IDs.</li>
+          <li>Achieved <b>100% match precision</b> (zero false merges) and <b>97.5% recall</b>, cutting duplicate rate from <b>8.0% to 0.2%</b>, with per-facility data-quality scoring (completeness, temporal validity, uniqueness) on an HL7v2 + FHIR R4 ingestion Lakehouse.</li>
+        </ul>
+
+        <div class="project__metrics">
+          <div><b>100%</b><span>match precision</span></div>
+          <div><b>97.5%</b><span>recall</span></div>
+          <div><b>8.0→0.2%</b><span>duplicate rate</span></div>
+          <div><b>0</b><span>raw PII transmitted</span></div>
+        </div>
+
+        <div class="project__stack">
+          <span>Python</span><span>HL7apy</span><span>FHIR R4</span><span>Delta Lake (SCD2)</span><span>PySpark</span><span>Great Expectations</span><span>Airflow</span>
+        </div>
+      </article>
+
+      <article class="project reveal" data-reveal-delay="160">
+        <div class="project__head">
+          <span class="project__idx">05</span>
+          <div class="project__heading">
+            <h3 class="project__title">Real-Time Banking Regulatory Reporting &amp; Reconciliation</h3>
+            <p class="project__tag">Medallion lakehouse · SWIFT MT940 reconciliation · Basel III automation</p>
+          </div>
+          <a class="project__link" href="https://github.com/Raakeshmenona/banking-regulatory-platform" target="_blank" rel="noopener noreferrer" aria-label="View banking-regulatory-platform on GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M9.5 8H16v6.5"/></svg>
+          </a>
+        </div>
+
+        <ul class="bullets">
+          <li>Built a <b>Bronze/Silver/Gold medallion Lakehouse</b> reconciling <b>SWIFT MT940</b>, general-ledger and core-banking feeds at position level, with automated break classification (matched / amount-break / missing-in-source) and per-source data-quality rule engines.</li>
+          <li>Automated <b>Basel III</b> regulatory computation — CAR, LCR, SLR against RBI minimums, risk-weighted assets — on Databricks SQL and Power BI.</li>
+          <li>Cut the reconciliation cycle from <b>T+1 to under 30 minutes</b> with <b>~98% automated break detection</b>.</li>
+        </ul>
+
+        <div class="project__metrics">
+          <div><b>&lt;30 min</b><span>from T+1 cycle</span></div>
+          <div><b>~98%</b><span>automated breaks</span></div>
+          <div><b>3</b><span>medallion layers</span></div>
+          <div><b>Basel III</b><span>CAR · LCR · SLR</span></div>
+        </div>
+
+        <div class="project__stack">
+          <span>PySpark on Databricks</span><span>Delta Lake</span><span>ADLS Gen2</span><span>Azure Event Hubs</span><span>Airflow</span><span>Power BI</span><span>Azure DevOps</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="projects__cta reveal">
+      <a class="btn btn--ghost" href="https://github.com/Raakeshmenona" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2.2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        See all repositories on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CREDENTIALS ============ -->
+<section class="section" id="credentials">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="kicker">05 — Credentials</span>
+      <h2 class="section__title">Certifications &amp; recognition</h2>
+    </div>
+
+    <div class="cred__grid">
+      <div class="cred__col reveal">
+        <h3 class="cred__col-title">Certifications</h3>
+        <ul class="certs">
+          <li class="cert"><span class="cert__badge">G</span><div><b>Google Advanced Data Analytics</b><span>Professional Certificate</span></div></li>
+          <li class="cert"><span class="cert__badge">IBM</span><div><b>IBM Data Science</b><span>Professional Certificate</span></div></li>
+          <li class="cert"><span class="cert__badge">G</span><div><b>Google Business Intelligence</b><span>Professional Certificate</span></div></li>
+          <li class="cert"><span class="cert__badge">AI</span><div><b>Generative AI with Large Language Models</b><span>DeepLearning.AI</span></div></li>
+          <li class="cert cert--wip"><span class="cert__badge">MS</span><div><b>Microsoft DP-700 · Azure Data Engineer Associate</b><span>In progress</span></div></li>
+          <li class="cert cert--wip"><span class="cert__badge">DB</span><div><b>Databricks Data Engineer Associate</b><span>In progress</span></div></li>
+        </ul>
+      </div>
+
+      <div class="cred__col reveal" data-reveal-delay="120">
+        <h3 class="cred__col-title">Achievements</h3>
+        <div class="ach">
+          <div class="ach__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v5a4 4 0 0 1-8 0Z"/><path d="M8 5H5.5a2.5 2.5 0 0 0 2.5 5M16 5h2.5A2.5 2.5 0 0 1 16 10M8 20h8M9 16h6l1 4H8Z"/></svg>
+          </div>
+          <div>
+            <b>Multiple client appreciation awards</b>
+            <p>Recognised by client stakeholders and internal leadership for delivering 4+ high-impact data engineering and analytics solutions that improved operational efficiency and reporting reliability.</p>
+          </div>
+        </div>
+        <div class="ach">
+          <div class="ach__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19a4 4 0 0 0-8 0"/><circle cx="12" cy="10" r="3"/><path d="M20.5 17.5a4 4 0 0 0-3-3.4M3.5 17.5a4 4 0 0 1 3-3.4M18.5 8.8a2.4 2.4 0 1 0-2-2M5.5 8.8a2.4 2.4 0 1 1 2-2"/></svg>
+          </div>
+          <div>
+            <b>10+ knowledge-sharing sessions</b>
+            <p>Ran technical upskilling on Python, SQL and ETL best practices for <b>25+ engineers</b>, strengthening team capability in analytics engineering.</p>
+          </div>
+        </div>
+        <div class="ach">
+          <div class="ach__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V6a2 2 0 0 1 2-2h11.5A1.5 1.5 0 0 1 19 5.5v13"/><path d="M6 17h13v3H6a2 2 0 0 1 0-4"/></svg>
+          </div>
+          <div>
+            <b>B.E. Mechanical Engineering</b>
+            <p>Anna University, Chennai — 2016 to 2020.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section section--contact" id="contact">
+  <div class="container">
+    <div class="contact reveal">
+      <span class="kicker">06 — Contact</span>
+      <h2 class="contact__title">Let's build something that <span class="grad">doesn't break at 3am.</span></h2>
+      <p class="contact__sub">
+        Open to Senior Data Engineer and Data Platform Engineer roles. If you have a pipeline that needs
+        modernising — or a warehouse that needs to be trusted — I'd like to hear about it.
+      </p>
+
+      <div class="contact__cards">
+        <a class="ccard" href="mailto:raakesh.ajaykumar@outlook.com">
+          <span class="ccard__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 8.3 5.6a1.2 1.2 0 0 0 1.4 0L21 7"/></svg></span>
+          <span class="ccard__k">Email</span>
+          <span class="ccard__v">raakesh.ajaykumar@outlook.com</span>
+        </a>
+        <a class="ccard" href="tel:+919791070751">
+          <span class="ccard__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.3 3.5h3l1.5 4-2 1.4a12.5 12.5 0 0 0 6.3 6.3l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.8 16.8 0 0 1 4.3 5.7a2 2 0 0 1 2-2.2Z"/></svg></span>
+          <span class="ccard__k">Phone</span>
+          <span class="ccard__v">+91 97910 70751</span>
+        </a>
+        <a class="ccard" href="https://www.linkedin.com/in/araakeshmenon/" target="_blank" rel="noopener noreferrer">
+          <span class="ccard__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9.5 9h3.8v1.64h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21h-4Z"/></svg></span>
+          <span class="ccard__k">LinkedIn</span>
+          <span class="ccard__v">in/araakeshmenon</span>
+        </a>
+        <a class="ccard" href="https://github.com/Raakeshmenona" target="_blank" rel="noopener noreferrer">
+          <span class="ccard__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.42c.58.1.79-.25.79-.56v-2.2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></span>
+          <span class="ccard__k">GitHub</span>
+          <span class="ccard__v">@Raakeshmenona</span>
+        </a>
+      </div>
+
+      <div class="contact__actions">
+        <a class="btn btn--primary" href="mailto:raakesh.ajaykumar@outlook.com">
+          Email me
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0-5.5-5.5M19 12l-5.5 5.5"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="assets/files/Raakesh_Menon_Senior_Data_Engineer_Resume.pdf" download>Download résumé (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__copy">© <span id="year">2026</span> Raakesh Menon A · Senior Data Engineer · Bengaluru, India</p>
+    <p class="footer__note">Static site — no trackers, no frameworks.</p>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
