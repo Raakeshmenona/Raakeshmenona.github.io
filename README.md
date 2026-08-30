@@ -167,8 +167,82 @@ Keep the filename unchanged so the navigation and contact download buttons conti
 
 ---
 
+## 🔍 SEO
+
+### What is implemented
+
+| Area | Detail |
+|------|--------|
+| Title | `Raakesh Menon \| Senior Data Engineer in Bengaluru, India` (56 chars) |
+| Meta description | 150 chars, keyword-led, action-closing |
+| Canonical | `https://raakeshmenona.github.io/` |
+| Robots | `index, follow, max-image-preview:large, max-snippet:-1` |
+| Language | `lang="en-IN"`, `og:locale=en_IN` |
+| Geo meta | `geo.region=IN-KA`, `geo.placename`, `geo.position`, `ICBM` |
+| Open Graph | `og:type=profile`, full set + 1200×630 image |
+| Twitter card | `summary_large_image` |
+| Structured data | One JSON-LD `@graph`: Person, WebSite, ProfilePage, ItemList, FAQPage |
+| Crawl files | `robots.txt`, `sitemap.xml` (with image sitemap), `site.webmanifest` |
+| Error page | `404.html` with `noindex, follow` |
+| Identity | `rel="me"` on the GitHub and LinkedIn links |
+| Headings | Exactly one `<h1>`, clean `h2` → `h3` hierarchy |
+| Content | FAQ section answering real recruiter queries, marked up as `FAQPage` |
+
+### The structured-data graph
+
+`index.html` carries a single JSON-LD `@graph` that describes Raakesh as an **entity**, not just a page:
+
+- **Person** — job title, Bengaluru `PostalAddress` + `homeLocation` geo, `worksFor` TCS,
+  `alumniOf` Anna University, `hasOccupation` with `occupationLocation: Bengaluru`,
+  23 `knowsAbout` topics, 4 `hasCredential` certificates, `sameAs` GitHub + LinkedIn.
+- **WebSite / ProfilePage** — ties the page to the person.
+- **ItemList** — the five projects as `SoftwareSourceCode` with `codeRepository` links.
+- **FAQPage** — five questions mirroring the visible FAQ section.
+
+Validate after any edit at <https://search.google.com/test/rich-results> and
+<https://validator.schema.org/>.
+
+### Social preview image
+
+`assets/img/og-cover.png` (1200×630). Regenerate with the script in the scratchpad, or edit and
+re-export at the same dimensions — `og:image:width` / `og:image:height` are declared in the head.
+
+### ⚠️ Before this ranks: change the domain if it differs
+
+Every absolute URL assumes **`https://raakeshmenona.github.io/`**. If you deploy elsewhere, update:
+
+```text
+index.html        canonical, og:url, og:image, twitter:image, all 12 JSON-LD @id / url fields
+404.html          nothing (uses root-relative paths)
+robots.txt        Sitemap: line
+sitemap.xml       both <loc> entries and the <image:loc>
+site.webmanifest  nothing (uses relative paths)
+```
+
+### Off-page: what actually moves the ranking
+
+On-page SEO is now done and is the smaller half. Ranking for competitive queries like
+*senior data engineer bengaluru* depends mostly on signals this repo cannot contain:
+
+1. **Google Search Console** — add the property, verify, submit `sitemap.xml`, then
+   *URL Inspection → Request Indexing*. Without this the site may take weeks to appear at all.
+   Also add **Bing Webmaster Tools** (it feeds ChatGPT and Copilot search).
+2. **Backlinks from your own profiles** — put the URL in the LinkedIn *Website* field and About
+   section, the GitHub profile *Website* field, your GitHub profile README, Stack Overflow,
+   Medium/Dev.to, and your email signature. These are the highest-value links you fully control.
+3. **Name consistency** — spell your name, title and city identically on the site, LinkedIn and
+   GitHub. Entity matching is literal.
+4. **Publish technical writing** — two or three deep posts (Snowflake migration, medallion
+   architecture, LLM-assisted ETL) hosted *on this domain* under `/blog/`. Long-form pages that
+   earn links are the single biggest lever for a personal site.
+5. **Be patient and realistic** — a brand-new `github.io` subdomain has no domain authority.
+   Expect to rank for **"Raakesh Menon"** and **"Raakesh Menon data engineer"** within weeks, and
+   for generic city+role queries only after sustained content and links. A custom domain
+   (e.g. `raakeshmenon.com`) is worth it if you intend to invest long-term.
+
 ## 🔗 Connect
 
+- **Live Website:** <https://raakeshmenona.github.io/>
 - **GitHub:** <https://github.com/Raakeshmenona>
 - **LinkedIn:** <https://www.linkedin.com/in/araakeshmenon/>
 

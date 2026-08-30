@@ -1,0 +1,6 @@
+# robots.txt — https://raakeshmenona.github.io/
+User-agent: *
+Allow: /
+
+# Nothing here is private; crawl everything including the resume PDF.
+Sitemap: https://raakeshmenona.github.io/sitemap.xml

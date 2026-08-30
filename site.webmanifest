@@ -1,0 +1,19 @@
+{
+  "name": "Raakesh Menon — Senior Data Engineer",
+  "short_name": "Raakesh Menon",
+  "description": "Portfolio of Raakesh Menon, a Senior Data Engineer in Bengaluru specialising in Snowflake, PySpark and the Azure data platform.",
+  "lang": "en-IN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#070d14",
+  "theme_color": "#070d14",
+  "icons": [
+    {
+      "src": "assets/img/og-cover.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
