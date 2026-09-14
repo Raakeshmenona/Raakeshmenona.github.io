@@ -39,8 +39,9 @@ Built with **HTML, CSS, and vanilla JavaScript**—no frameworks, build tools, o
 - Infinite technology marquee
 - About section
 - Filterable Skills grid
-- Interactive Experience timeline
-- Five featured projects
+- Industries band (financial services, semiconductor, aerospace, animal health)
+- Experience timeline with six KPI-first client engagement cards and an *Expand all* toggle
+- Five featured portfolio projects
 - Certifications & achievements
 - Contact section with resume download
 - Light & Dark themes
@@ -153,6 +154,8 @@ This is a static website and can be deployed anywhere.
 
 ## ✏️ Updating Content
 
+**Content source:** resume `RaakeshMenon_Senior_Data_Engineer_V27.docx` (Sept 2026). Keep the site and the downloadable PDF on the same version so numbers always match.
+
 All portfolio content lives in `index.html`.
 
 ### Replace the Resume
@@ -173,8 +176,8 @@ Keep the filename unchanged so the navigation and contact download buttons conti
 
 | Area | Detail |
 |------|--------|
-| Title | `Raakesh Menon \| Senior Data Engineer in Bengaluru, India` (56 chars) |
-| Meta description | 150 chars, keyword-led, action-closing |
+| Title | `Raakesh Menon \| Senior & Lead Data Engineer in Bengaluru` (56 chars) |
+| Meta description | 152 chars, keyword-led, action-closing |
 | Canonical | `https://raakeshmenona.github.io/` |
 | Robots | `index, follow, max-image-preview:large, max-snippet:-1` |
 | Language | `lang="en-IN"`, `og:locale=en_IN` |
@@ -194,7 +197,7 @@ Keep the filename unchanged so the navigation and contact download buttons conti
 
 - **Person** — job title, Bengaluru `PostalAddress` + `homeLocation` geo, `worksFor` TCS,
   `alumniOf` Anna University, `hasOccupation` with `occupationLocation: Bengaluru`,
-  23 `knowsAbout` topics, 4 `hasCredential` certificates, `sameAs` GitHub + LinkedIn.
+  32 `knowsAbout` topics, 4 `hasCredential` certificates, `sameAs` GitHub + LinkedIn.
 - **WebSite / ProfilePage** — ties the page to the person.
 - **ItemList** — the five projects as `SoftwareSourceCode` with `codeRepository` links.
 - **FAQPage** — five questions mirroring the visible FAQ section.

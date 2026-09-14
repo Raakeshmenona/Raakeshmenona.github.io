@@ -180,10 +180,10 @@
      5. ROLE ROTATOR (typewriter)
      ---------------------------------------------------------------------- */
   var phrases = [
-    'Snowflake & Lakehouse Architecture',
-    'PySpark at 2 TB / month',
-    'Azure Data Platform',
-    'ETL/ELT Modernisation',
+    'Snowflake & PySpark at Scale',
+    'ETL Modernisation',
+    'Azure, Fabric & OneLake',
+    'Data Migration & Modelling',
     'Data Quality You Can Prove',
     'LLM-Assisted Data Engineering'
   ];
@@ -240,7 +240,29 @@
   }
 
   /* ----------------------------------------------------------------------
-     8. FOOTER YEAR
+     8. EXPERIENCE — expand / collapse every engagement
+     ---------------------------------------------------------------------- */
+  var expandAll = $('#expandAll');
+  var engDetails = $$('.eng__more');
+
+  function syncExpandButton() {
+    var allOpen = engDetails.length > 0 && engDetails.every(function (d) { return d.open; });
+    expandAll.textContent = allOpen ? 'Collapse all' : 'Expand all';
+    expandAll.setAttribute('aria-pressed', String(allOpen));
+  }
+
+  if (expandAll && engDetails.length) {
+    expandAll.addEventListener('click', function () {
+      var open = expandAll.getAttribute('aria-pressed') !== 'true';
+      engDetails.forEach(function (d) { d.open = open; });
+      syncExpandButton();
+    });
+    // keep the label honest when cards are toggled one at a time
+    engDetails.forEach(function (d) { d.addEventListener('toggle', syncExpandButton); });
+  }
+
+  /* ----------------------------------------------------------------------
+     9. FOOTER YEAR
      ---------------------------------------------------------------------- */
   var year = $('#year');
   if (year) year.textContent = new Date().getFullYear();
