@@ -245,11 +245,25 @@
       "@id": "https://raakeshmenona.github.io/#projects",
       "name": "Data engineering projects by Raakesh Menon",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
-      "numberOfItems": 4,
+      "numberOfItems": 5,
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "LLM-Augmented Legacy ETL Modernization Framework",
+            "description": "Translates legacy Perl/SQL ETL to Python with an LLM and proves behavioural equivalence by dual-executing legacy and translated jobs and diffing outputs cell-by-cell, with a CI gate blocking promotion below 99% equivalence. Achieved 85% automated translation, cut manual conversion from 40 hours to 4 hours per script and generated 129 regression tests.",
+            "codeRepository": "https://github.com/Raakeshmenona/etl-modernization-framework",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://raakeshmenona.github.io/#person"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
           "item": {
             "@type": "SoftwareSourceCode",
             "name": "Aerospace MRO Supply-Chain Digital Twin",
@@ -263,7 +277,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 2,
+          "position": 3,
           "item": {
             "@type": "SoftwareSourceCode",
             "name": "Semiconductor Yield Intelligence Pipeline",
@@ -277,7 +291,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": 4,
           "item": {
             "@type": "SoftwareSourceCode",
             "name": "FHIR-Native Clinical Data Lakehouse",
@@ -291,7 +305,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 5,
           "item": {
             "@type": "SoftwareSourceCode",
             "name": "Real-Time Banking Regulatory Reporting & Reconciliation Platform",
@@ -630,7 +644,7 @@
     <div class="section__head reveal">
       <span class="kicker">02 — Capabilities</span>
       <h2 class="section__title">The stack I build with</h2>
-      <p class="section__sub">Filter by discipline — the toolkit behind my client delivery at TCS and four end-to-end portfolio builds.</p>
+      <p class="section__sub">Filter by discipline — the toolkit behind my client delivery at TCS and five end-to-end portfolio builds.</p>
     </div>
 
     <div class="filter-bar reveal">
@@ -899,10 +913,10 @@
   <div class="container">
     <div class="section__head reveal">
       <span class="kicker">04 — Portfolio projects</span>
-      <h2 class="section__title">Four end-to-end <span class="grad">data platforms</span></h2>
+      <h2 class="section__title">Five end-to-end <span class="grad">data platforms</span></h2>
       <p class="section__sub">
-        Portfolio builds engineered to production standards — results measured on synthetic datasets.
-        Full code, pipelines and CI gates are on GitHub.
+        Full code, pipelines and CI gates are on GitHub. Results are measured on synthetic corpora,
+        except the ETL modernisation framework, which is also in use in my current role.
       </p>
     </div>
 
@@ -911,6 +925,38 @@
       <article class="project reveal">
         <div class="project__head">
           <span class="project__idx">01</span>
+          <div class="project__heading">
+            <h3 class="project__title">LLM-Augmented Legacy ETL Modernization Framework</h3>
+            <p class="project__tag">LLM-assisted migration · behavioural-equivalence proof · CI supply-chain security</p>
+          </div>
+          <a class="project__link" href="https://github.com/Raakeshmenona/etl-modernization-framework" target="_blank" rel="noopener noreferrer" aria-label="View etl-modernization-framework on GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M9.5 8H16v6.5"/></svg>
+          </a>
+        </div>
+
+        <p class="project__note">Also delivered in my current role at TCS — see <a href="#experience">Experience</a>.</p>
+
+        <ul class="bullets">
+          <li>Translates legacy <b>Perl/SQL ETL to Python</b> with an LLM, then <b>proves behavioural equivalence</b> by dual-executing legacy and translated jobs on identical data and diffing outputs cell-by-cell — a 5-component weighted score (schema, row set, cell values, null patterns, ordering) with a <b>CI gate blocking promotion below 99%</b>.</li>
+          <li>Achieved <b>85% automated translation</b> and cut manual conversion effort from <b>40 hours to 4 hours per script</b>, with <b>129 auto-generated regression tests</b> pinned to legacy behaviour.</li>
+          <li>Sandboxes LLM-generated code via <b>AST-based import allow-listing</b> as a CI supply-chain security control.</li>
+        </ul>
+
+        <div class="project__metrics">
+          <div><b>85%</b><span>auto-translated</span></div>
+          <div><b>40h → 4h</b><span>per script</span></div>
+          <div><b>129</b><span>regression tests</span></div>
+          <div><b>99%</b><span>CI gate threshold</span></div>
+        </div>
+
+        <div class="project__stack">
+          <span>Python</span><span>Claude API</span><span>sqlglot</span><span>PySpark</span><span>Great Expectations</span><span>pytest</span><span>Airflow</span><span>Snowflake</span><span>Azure DevOps</span>
+        </div>
+      </article>
+
+      <article class="project reveal" data-reveal-delay="80">
+        <div class="project__head">
+          <span class="project__idx">02</span>
           <div class="project__heading">
             <h3 class="project__title">Aerospace MRO Supply-Chain Digital Twin</h3>
             <p class="project__tag">Star-schema hub · SCD Type 2 · intermittent-demand forecasting</p>
@@ -939,9 +985,9 @@
         </div>
       </article>
 
-      <article class="project reveal" data-reveal-delay="80">
+      <article class="project reveal" data-reveal-delay="160">
         <div class="project__head">
-          <span class="project__idx">02</span>
+          <span class="project__idx">03</span>
           <div class="project__heading">
             <h3 class="project__title">Semiconductor Yield Intelligence Pipeline</h3>
             <p class="project__tag">BOM-aware root-cause analysis · graph explosion · CI ground-truth gate</p>
@@ -969,9 +1015,9 @@
         </div>
       </article>
 
-      <article class="project reveal" data-reveal-delay="160">
+      <article class="project reveal" data-reveal-delay="80">
         <div class="project__head">
-          <span class="project__idx">03</span>
+          <span class="project__idx">04</span>
           <div class="project__heading">
             <h3 class="project__title">FHIR-Native Clinical Data Lakehouse</h3>
             <p class="project__tag">Privacy-preserving record linkage · Bloom-filter PPRL · golden records</p>
@@ -999,9 +1045,9 @@
         </div>
       </article>
 
-      <article class="project reveal" data-reveal-delay="80">
+      <article class="project reveal" data-reveal-delay="160">
         <div class="project__head">
-          <span class="project__idx">04</span>
+          <span class="project__idx">05</span>
           <div class="project__heading">
             <h3 class="project__title">Real-Time Banking Regulatory Reporting &amp; Reconciliation</h3>
             <p class="project__tag">Medallion lakehouse · SWIFT MT940 reconciliation · Basel III automation</p>

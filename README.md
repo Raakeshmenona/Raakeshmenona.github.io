@@ -41,7 +41,7 @@ Built with **HTML, CSS, and vanilla JavaScript**—no frameworks, build tools, o
 - Filterable Skills grid
 - Industries band (financial services, semiconductor, aerospace, animal health)
 - Experience timeline with KPI-first client engagement cards, an LLM-framework feature panel and an *Expand all* toggle
-- Four featured portfolio projects
+- Five featured portfolio projects
 - Certifications & achievements
 - Contact section with resume download
 - Light & Dark themes
@@ -199,7 +199,7 @@ Keep the filename unchanged so the navigation and contact download buttons conti
   `alumniOf` Anna University, `hasOccupation` with `occupationLocation: Bengaluru`,
   38 `knowsAbout` topics, 4 `hasCredential` certificates, `sameAs` GitHub + LinkedIn.
 - **WebSite / ProfilePage** — ties the page to the person.
-- **ItemList** — the four portfolio projects as `SoftwareSourceCode` with `codeRepository` links.
+- **ItemList** — the five portfolio projects as `SoftwareSourceCode` with `codeRepository` links.
 - **FAQPage** — five questions mirroring the visible FAQ section.
 
 Validate after any edit at <https://search.google.com/test/rich-results> and
