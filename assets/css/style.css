@@ -730,6 +730,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .skill-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--border-str); }
 .skill-card:hover::after { opacity: 1; }
 .skill-card.is-hidden { display: none; }
+/* two wide cards + five normal ones fill three clean rows on a 3-column grid */
+.skill-card--wide { grid-column: span 2; }
 
 .skill-card__icon {
   width: 44px; height: 44px;
@@ -965,27 +967,71 @@ ul { margin: 0; padding: 0; list-style: none; }
 .eng__more .bullets { margin-top: var(--s-2); animation: faqIn .35s var(--ease); }
 .eng__more .bullets li { font-size: .86rem; margin-bottom: 9px; }
 
-/* ---------- Azure architecture panel ---------- */
-.eng-azure {
+/* an odd KPI count leaves the last cell alone on its row — let it span both columns */
+.eng__kpis div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+/* ---------- Feature panel (LLM framework) ---------- */
+.eng-feature {
+  position: relative;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   gap: var(--s-3);
   margin-top: var(--s-2);
+  padding: var(--s-4);
+  border-radius: var(--r-md);
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--surface-2), var(--surface-2)) padding-box,
+    var(--grad-brand) border-box;
+  overflow: hidden;
+}
+.eng-feature::after {
+  content: ''; position: absolute; right: -60px; top: -60px;
+  width: 200px; height: 200px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(125, 68, 207, .16), transparent 70%);
+  pointer-events: none;
+}
+.eng-feature > * { position: relative; z-index: 1; }
+.eng-feature__icon {
+  width: 42px; height: 42px;
+  display: grid; place-items: center;
+  border-radius: 11px;
+  background: var(--grad-brand);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(125, 68, 207, .3);
+}
+.eng-feature__icon svg { width: 21px; height: 21px; }
+.eng-feature .eng__title { min-height: 0; font-size: 1.08rem; }
+.eng-feature .bullets li { font-size: .9rem; }
+
+.eng-feature__kpis {
+  display: flex; flex-wrap: wrap; gap: var(--s-1);
+  margin-top: var(--s-3);
+}
+.eng-feature__kpis div {
+  padding: 9px 14px;
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.eng-feature__kpis b {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  margin-right: 6px;
+  background: var(--grad-brand);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.eng-feature__kpis span { font-size: .78rem; color: var(--text-3); }
+
+/* ---------- "How I deliver" practice notes ---------- */
+.eng-practice {
+  margin-top: var(--s-2);
   padding: var(--s-3);
   border-radius: var(--r-md);
-  border: 1px dashed rgba(41, 181, 232, .4);
-  background: var(--accent-soft);
+  border: 1px dashed var(--border-str);
 }
-.eng-azure__icon {
-  width: 40px; height: 40px;
-  display: grid; place-items: center;
-  border-radius: 10px;
-  background: var(--grad-cool);
-  color: #fff;
-}
-.eng-azure__icon svg { width: 21px; height: 21px; }
-.eng-azure .eng__title { min-height: 0; }
-.eng-azure .bullets li { font-size: .88rem; }
+.eng-practice .bullets li { font-size: .88rem; }
 
 /* ==========================================================================
    INDUSTRIES BAND (inside About)
@@ -1439,7 +1485,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   .eng-grid, .domains__grid { grid-template-columns: 1fr; }
   .tl-item__card { padding: var(--s-3) 14px; }
   .eng__title { min-height: 0; }
-  .eng-azure { grid-template-columns: 1fr; }
+  .eng-feature { grid-template-columns: 1fr; padding: var(--s-3); }
+  .skill-card--wide { grid-column: auto; }
   .exp-toolbar { padding-left: 0; }
   .timeline { padding-left: 32px; }
   .timeline__rail { left: 6px; }

@@ -156,7 +156,7 @@
       var p = Math.min((ts - start) / duration, 1);
       var eased = 1 - Math.pow(1 - p, 3);           // easeOutCubic
       var value = target * eased;
-      el.textContent = (target % 1 === 0 ? Math.round(value) : value.toFixed(2)) + suffix;
+      el.textContent = (target % 1 === 0 ? Math.round(value).toLocaleString('en-US') : value.toFixed(2)) + suffix;
       if (p < 1) window.requestAnimationFrame(step);
     }
     window.requestAnimationFrame(step);
@@ -181,9 +181,9 @@
      ---------------------------------------------------------------------- */
   var phrases = [
     'Snowflake & PySpark at Scale',
-    'ETL Modernisation',
-    'Azure, Fabric & OneLake',
-    'Data Migration & Modelling',
+    'Legacy ETL Modernisation',
+    'Azure Data Factory & Databricks',
+    'Microsoft Fabric & OneLake',
     'Data Quality You Can Prove',
     'LLM-Assisted Data Engineering'
   ];
