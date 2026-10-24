@@ -245,7 +245,7 @@
       "@id": "https://raakeshmenona.github.io/#projects",
       "name": "Data engineering projects by Raakesh Menon",
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
-      "numberOfItems": 6,
+      "numberOfItems": 7,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -325,6 +325,20 @@
             "name": "Consumer Complaint Early-Warning System",
             "description": "Streams 4.7 million real CFPB complaints through Kafka / Event Hubs into a Delta Lake medallion and detects conduct-risk incidents with negative-binomial baselines on three horizons and a leave-one-out market adjustment. Backtested point-in-time: 8 of 11 labelled incidents caught, a median 29 days ahead of the monthly complaints MIS.",
             "codeRepository": "https://github.com/Raakeshmenona/complaint-early-warning-system",
+            "programmingLanguage": "Python",
+            "author": {
+              "@id": "https://raakeshmenona.github.io/#person"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "SoftwareSourceCode",
+            "name": "Training-Data Intake Gate",
+            "description": "Decides whether open datasets are safe to fine-tune on: 1.77 million records from seven Hugging Face instruction datasets through a PySpark and Delta Lake medallion, with content-based licence lineage, benchmark-contamination, PII and near-duplicate checks, per-use-case verdicts and a live evidence report.",
+            "codeRepository": "https://github.com/Raakeshmenona/training-data-intake-gate",
             "programmingLanguage": "Python",
             "author": {
               "@id": "https://raakeshmenona.github.io/#person"
@@ -658,7 +672,7 @@
     <div class="section__head reveal">
       <span class="kicker">02 — Capabilities</span>
       <h2 class="section__title">The stack I build with</h2>
-      <p class="section__sub">Filter by discipline — the toolkit behind my client delivery at TCS and six end-to-end portfolio builds.</p>
+      <p class="section__sub">Filter by discipline — the toolkit behind my client delivery at TCS and seven end-to-end portfolio builds.</p>
     </div>
 
     <div class="filter-bar reveal">
@@ -927,11 +941,12 @@
   <div class="container">
     <div class="section__head reveal">
       <span class="kicker">04 — Portfolio projects</span>
-      <h2 class="section__title">Six end-to-end <span class="grad">data platforms</span></h2>
+      <h2 class="section__title">Seven end-to-end <span class="grad">data platforms</span></h2>
       <p class="section__sub">
         Full code, pipelines and CI gates are on GitHub. Results are measured on synthetic corpora,
-        except the complaint early-warning system, backtested on 4.7M real CFPB complaints, and the
-        ETL modernisation framework, which is also in use in my current role.
+        except the complaint early-warning system, backtested on 4.7M real CFPB complaints, the
+        training-data intake gate, run on 1.77M real Hugging Face records, and the ETL modernisation
+        framework, which is also in use in my current role.
       </p>
     </div>
 
@@ -1119,6 +1134,38 @@
 
         <div class="project__stack">
           <span>Python</span><span>Kafka / Event Hubs</span><span>PySpark on Databricks</span><span>Delta Lake</span><span>Snowflake</span><span>dbt</span><span>Airflow</span><span>Power BI</span><span>Azure DevOps</span>
+        </div>
+      </article>
+
+      <article class="project reveal" data-reveal-delay="160">
+        <div class="project__head">
+          <span class="project__idx">07</span>
+          <div class="project__heading">
+            <h3 class="project__title">Training-Data Intake Gate</h3>
+            <p class="project__tag">Licence lineage · benchmark contamination · PII · deduplication — before data reaches a fine-tune</p>
+          </div>
+          <a class="project__link" href="https://github.com/Raakeshmenona/training-data-intake-gate" target="_blank" rel="noopener noreferrer" aria-label="View training-data-intake-gate on GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M9.5 8H16v6.5"/></svg>
+          </a>
+        </div>
+
+        <p class="project__note">Measured on real data — 1.77M Hugging Face records. <a href="https://raakeshmenona.github.io/training-data-intake-gate/" target="_blank" rel="noopener noreferrer">Live evidence report</a></p>
+
+        <ul class="bullets">
+          <li>Checks <b>seven of the most-downloaded instruction datasets</b> on Hugging Face before fine-tuning — <b>1.77M records</b> through a <b>PySpark + Delta Lake medallion</b> with revision-pinned ingestion, five source shapes mapped to one data contract, and a single-pass MinHash / n-gram / PII scan that runs in <b>about four minutes</b> on a laptop.</li>
+          <li>Traces licence lineage from content, not dataset cards: an LSH near-duplicate graph plus Spark SQL over Hub publication dates showed a dataset declaring <b>CC-BY-4.0</b> whose distinctive prompts are <b>94% from a non-commercial dataset</b> — cross-checked at <b>91% agreement</b> against provenance labels the pipeline never saw.</li>
+          <li>Found <b>70 benchmark test items</b> (MMLU, GSM8K) inside training data and private-key material in a 1M-row chat corpus; YAML policies per use case turn the evidence into verdicts, a remediated and PII-redacted training mix, and a draft <b>EU AI Act</b> training-content summary.</li>
+        </ul>
+
+        <div class="project__metrics">
+          <div><b>1.77M</b><span>records checked</span></div>
+          <div><b>94%</b><span>prompts traced to a non-commercial source</span></div>
+          <div><b>70</b><span>benchmark test items found</span></div>
+          <div><b>~4 min</b><span>full run on a laptop</span></div>
+        </div>
+
+        <div class="project__stack">
+          <span>Python</span><span>PySpark</span><span>Delta Lake</span><span>Spark SQL</span><span>MinHash LSH</span><span>Hugging Face</span><span>pytest</span><span>GitHub Actions</span><span>GitHub Pages</span>
         </div>
       </article>
 
