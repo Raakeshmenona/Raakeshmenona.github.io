@@ -1152,7 +1152,7 @@
         <p class="project__note">Measured on real data — 1.77M Hugging Face records. <a href="https://raakeshmenona.github.io/training-data-intake-gate/" target="_blank" rel="noopener noreferrer">Live evidence report</a></p>
 
         <ul class="bullets">
-          <li>Checks <b>seven of the most-downloaded instruction datasets</b> on Hugging Face before fine-tuning — <b>1.77M records</b> through a <b>PySpark + Delta Lake medallion</b> with revision-pinned ingestion, five source shapes mapped to one data contract, and a single-pass MinHash / n-gram / PII scan that runs in <b>about four minutes</b> on a laptop.</li>
+          <li>Checks <b>seven widely used instruction datasets</b> on Hugging Face before fine-tuning — <b>1.77M records</b> through a <b>PySpark + Delta Lake medallion</b> with revision-pinned ingestion, five source shapes mapped to one data contract, and a single-pass MinHash / n-gram / PII scan that runs in <b>about four minutes</b> on a laptop.</li>
           <li>Traces licence lineage from content, not dataset cards: an LSH near-duplicate graph plus Spark SQL over Hub publication dates showed a dataset declaring <b>CC-BY-4.0</b> whose distinctive prompts are <b>94% from a non-commercial dataset</b> — cross-checked at <b>91% agreement</b> against provenance labels the pipeline never saw.</li>
           <li>Found <b>70 benchmark test items</b> (MMLU, GSM8K) inside training data and private-key material in a 1M-row chat corpus; YAML policies per use case turn the evidence into verdicts, a remediated and PII-redacted training mix, and a draft <b>EU AI Act</b> training-content summary.</li>
         </ul>
