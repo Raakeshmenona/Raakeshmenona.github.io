@@ -145,8 +145,9 @@
      ---------------------------------------------------------------------- */
   function countUp(el) {
     var target = parseFloat(el.dataset.count);
+    var prefix = el.dataset.prefix || '';
     var suffix = el.dataset.suffix || '';
-    if (reduced) { el.textContent = target + suffix; return; }
+    if (reduced) { el.textContent = prefix + target + suffix; return; }
 
     var duration = 1500;
     var start = null;
@@ -156,7 +157,7 @@
       var p = Math.min((ts - start) / duration, 1);
       var eased = 1 - Math.pow(1 - p, 3);           // easeOutCubic
       var value = target * eased;
-      el.textContent = (target % 1 === 0 ? Math.round(value).toLocaleString('en-US') : value.toFixed(2)) + suffix;
+      el.textContent = prefix + (target % 1 === 0 ? Math.round(value).toLocaleString('en-US') : value.toFixed(2)) + suffix;
       if (p < 1) window.requestAnimationFrame(step);
     }
     window.requestAnimationFrame(step);
